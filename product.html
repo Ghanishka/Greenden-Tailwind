@@ -17,7 +17,7 @@
         <h1 class="text-3xl">Greenden</h1>
 
         <!-- Menu bar icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 md:hidden"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 md:hidden"
             stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -39,12 +39,22 @@
     </nav>
 
 
+    <!-- side nav bar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all during-1000" style="width:50%;height:100vh; right:-50%;">
+        <div class="text-right p-5"> <p id="closenav" class="inline cursor-pointer"> X </p> </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600 md:flex">
+            <li> <a class="hover:underline hover:text-black" href="./index.html"> Home </a> </li>
+            <li> <a class="hover:underline hover:text-black" href="./product.html"> Products </a></li>
+            <li> <a class="hover:underline hover:text-black" href="./contact.html"> Contact </a></li>
+        </ul>
+    </section>
+
 
     <!-- Products section -->
     <section class="p-4 text-center">
         <h1 class="font-bold mt-5 text-3xl p-2">Our Products</h1>
-        <input type="text" class="border border-black p-2 m-3" style="width:80%;">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <input id ="search" type="text" class="border border-black p-2 m-3" style="width:80%;">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img src="./images/bestseller_1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="rose plant">
@@ -62,14 +72,14 @@
             <div>
                 <img src="./images/bestseller_3.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt=" Lily plant">
-                <h1>Rose plant</h1>
+                <h1>Lily plant</h1>
                 <p>$40</p>
             </div>
 
             <div>
                 <img src="./images/bestseller_4.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="tulip plant">
-                <h1>Rose plant</h1>
+                <h1>Tulip plant</h1>
                 <p>$50</p>
             </div>
 
@@ -111,6 +121,6 @@
         <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below those interest</p>
         <p>@2024 Greenday.com</p>
     </section>
-
+    <script src="./product.js"> </script>
 </body>
 </html>
